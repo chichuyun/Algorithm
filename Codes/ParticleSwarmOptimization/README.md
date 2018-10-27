@@ -17,7 +17,7 @@
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;c_1,c_2" title="\Large c_1,c_2" />
 。
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\vec{v_{i+1}}=w\vec{v}_{i}+c_1(\vec{p}_{best,i}-\vec{x}_i)ran()+c_2(\vec{g}_{best}-\vec{x}_i)ran()" title="\Large c_1,c_2" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\vec{v}_{i+1}=w\vec{v}_{i}+c_1(\vec{p}_{best,i}-\vec{x}_i)ran()+c_2(\vec{g}_{best}-\vec{x}_i)ran()" title="\Large c_1,c_2" />
 其中ran()是0到1之间的随机数。
 
 位置更新公式为
