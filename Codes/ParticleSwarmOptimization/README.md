@@ -17,7 +17,8 @@
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;c_1,c_2" title="\Large c_1,c_2" />
 。
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\vec{v_{i+1}}=w\vec{v}_{i}+c_1(\vec{p}_{best,i}-\vec{x}_i)ran()+c_2(\vec{g}_{best}-\vec{x}_i)" title="\Large c_1,c_2" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\vec{v_{i+1}}=w\vec{v}_{i}+c_1(\vec{p}_{best,i}-\vec{x}_i)ran()+c_2(\vec{g}_{best}-\vec{x}_i)ran()" title="\Large c_1,c_2" />
+其中ran()是0到1之间的随机数。
 
 位置更新公式为
 
@@ -32,7 +33,7 @@
 > 3. 利用速度公式进行迭代计算下一次的速度和位置，其中要考虑上下限问题
 > 4. 判断迭代条件是否满足(一般而言是通过设置一个确定的迭代次数)，满足则退出，否则回到步骤2.
 
-以下是我求解一个抛物面函数的动态过程，其中黑色的点是粒子，能看到所有粒子慢慢的都趋向于最值处。
+以下是我求解一个抛物面函数的动态过程，其中黑色的点是粒子，能看到所有粒子慢慢的都趋向于最值处。另外粒子群算法效率一般比遗传算法高，但是容易收敛到极值点而不是最值点。
 
 ![Python](./gif.gif)
 
