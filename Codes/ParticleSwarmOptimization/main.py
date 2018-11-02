@@ -95,7 +95,7 @@ if __name__=="__main__":
     process.initialize(-5, 5) # lower, upper
 
     process.evolve()
-    process.result() # 7.860, 24.853
+    process.result()
     process.plot()   # the evolution of values
 
 # ------------------------------------------------------------ # gif of evolution
