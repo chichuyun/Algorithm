@@ -9,9 +9,7 @@ NN = build_NN(input_nodes=784,
               output_nodes=10,
               learning_rate=0.5)
 
-PATH = "A:/Program_file/Python_zhou/Algorithms_4/mnist_dataset/"
-
-open(PATH*"mnist_train.csv", "r") do train_file
+open("/mnist_dataset/mnist_train.csv", "r") do train_file
     for data in readlines(train_file)
         targets_list = zeros(Float64, 10) .+ 0.01
         inputs_list = parse.(Float64, split(data, ","))
@@ -20,7 +18,7 @@ open(PATH*"mnist_train.csv", "r") do train_file
     end;
 end;
 
-open(PATH*"mnist_test_10.csv", "r") do test_file
+open("/mnist_dataset/mnist_test.csv", "r") do test_file
     for data in readlines(test_file)
         inputs_list = parse.(Float64, split(data, ","))
         println(trunc(Int64, inputs_list[1]), " ",
