@@ -14,7 +14,7 @@ module NeuralNetwork
 
         lr::T2  # learning rate
         wih::Matrix{T2}  # (hnodes,inodes) weight matrix between input and hidden
-        who::Matrix{T2}  # (onodes,onodes) weight matrix between hidden and output
+        who::Matrix{T2}  # (onodes,hnodes) weight matrix between hidden and output
 
         activite_function::Function = x->1.0/(1.0+exp(-x))
     end
