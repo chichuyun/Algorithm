@@ -46,7 +46,7 @@ module NeuralNetwork
         output_errors = target_list .- final_outputs  # output errors
         hidden_errors = NN.who'*output_errors  # hidden errors
 
-        # update weight matrice
+        # update weight matrices
         NN.who += NN.lr.*((output_errors.*final_outputs.*(1.0 .- final_outputs))*
                              hidden_outputs')
         NN.wih += NN.lr.*((hidden_errors.*hidden_outputs.*(1.0 .- hidden_outputs))*
