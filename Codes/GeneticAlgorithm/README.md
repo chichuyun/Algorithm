@@ -14,4 +14,4 @@
 ![png](./遗传算法.png)
 
 代码:
-[Fortran](./main.f95)
+[Fortran](./main.f95), [Fortran-v2](./version2.f90)
