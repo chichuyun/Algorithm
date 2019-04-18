@@ -7,7 +7,7 @@
 | Neural Network              |[Python](./Codes/NeutralNetwork/main.py)|||[Julia](./Codes/NeutralNetwork/main.jl)|
 
 ## 编译器或解释器要求
-gcc5.8版本及以上
+gcc5.8及以上
 
 python3
 
