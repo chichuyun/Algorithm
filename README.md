@@ -7,9 +7,9 @@
 | Neural Network              |[Python](./Codes/NeutralNetwork/main.py)|||[Julia](./Codes/NeutralNetwork/main.jl)|
 
 ## 编译器或解释器要求
-gcc5.8及以上
-python3
-Julia1.0
+gcc5.8及以上  
+python3  
+Julia1.0  
 
 ## 致谢
 感谢网友 **@尼古拉斯·魏** 对[Fortran](./Codes/GeneticAlgorithm/main.f95)版遗传算法的改进, 将其扩展可用于多变量函数的极值计算并引入格雷码。
