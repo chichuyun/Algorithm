@@ -267,7 +267,7 @@ contains
         integer(kind=I2B) :: pop_i
         integer(kind=I1B) :: i, pop_j
 
-        do pop_i=this%retain_num+1,this%population ! 子种群
+        do pop_i=1,this%population ! 子种群
             do pop_j=1,this%x_num ! 增加
                 if(this%mutation_rate>rand()) then    ! mutation_rate为变异率
                     i = ceiling(this%length*rand())   ! 变异位置随机分布
