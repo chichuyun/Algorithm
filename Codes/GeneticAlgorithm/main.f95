@@ -183,7 +183,7 @@ contains
         implicit none
         class(genetic) :: this
         integer :: pop_i, i
-        do pop_i=this%retain_num+1,this%population
+        do pop_i=1,this%population
             if(this%mutation_rate>ran()) then
                 i = ceiling(this%length*ran())
                 this%Chrom(i,pop_i) = 1 - this%Chrom(i,pop_i)  ! 1=>0, 0=>1
