@@ -45,8 +45,8 @@ int partition(vecInt &lst, int l, int r) {
     int i, j;
     v = lst[l];
     while(true) {
-        for(i=l;i<r;++i) if(lst[i]>v) break;
-        for(j=r;j>l;--j) if(lst[j]<=v) break;
+        for(i=l;i<r && lst[i]<=v;++i);
+        for(j=r;j>l && lst[j]>v;--j);
         if(i<j) swap(lst,i,j); else break;
     }
     swap(lst,l,j);
