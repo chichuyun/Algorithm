@@ -5,6 +5,7 @@
 | Genetic Algorithm           ||[Fortran](./Codes/GeneticAlgorithm/main.f95), [Fortran-v2](./Codes/GeneticAlgorithm/version2.f90)|||
 | Particle Swarm Optimization |[Python](./Codes/ParticleSwarmOptimization/main.py)||||
 | Neural Network              |[Python](./Codes/NeutralNetwork/main.py)|||[Julia](./Codes/NeutralNetwork/main.jl)|
+| Quick Sort |||[C++](./Codes/QuickSort/main.cpp)||
 
 ## 编译器或解释器要求
 gcc5.8及以上  
