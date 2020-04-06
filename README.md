@@ -8,6 +8,7 @@
 | Quick Sort |||[C++](./Codes/QuickSort/main.cpp)||
 | Counting Sort |||[C++](./Codes/CountingSort/main.cpp)||
 | Insertion Sort |||[C++](./Codes/InsertionSort/main.cpp)||
+| Bubble Sort |||[C++](./Codes/BubbleSort/main.cpp)||
 
 ## 编译器或解释器要求
 gcc5.8及以上  
