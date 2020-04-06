@@ -6,6 +6,7 @@
 | Particle Swarm Optimization |[Python](./Codes/ParticleSwarmOptimization/main.py)||||
 | Neural Network              |[Python](./Codes/NeutralNetwork/main.py)|||[Julia](./Codes/NeutralNetwork/main.jl)|
 | Quick Sort |||[C++](./Codes/QuickSort/main.cpp)||
+| Counting Sort |||[C++](./Codes/CountingSort/main.cpp)||
 
 ## 编译器或解释器要求
 gcc5.8及以上  
