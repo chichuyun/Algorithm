@@ -12,6 +12,7 @@
 | Shell Sort |||[C++](./Codes/Sort/ShellSort/main.cpp)||
 | Quick Sort |||[C++](./Codes/Sort/QuickSort/main.cpp)||
 | Merge Sort |||[C++](./Codes/Sort/MergeSort/main.cpp)||
+| Heap Sort |||[C++](./Codes/Sort/HeapSort/main.cpp)||
 
 ## 编译器或解释器要求
 gcc5.8及以上  
