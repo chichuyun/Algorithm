@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<utility>
 
 using namespace std;
 
@@ -7,7 +8,6 @@ typedef vector<int> vecInt;
 
 void quicksort(vecInt &, int, int);
 int partition(vecInt &, int, int);
-void swap(vecInt &, int, int);
 
 int main() {
     vecInt lst;
@@ -47,15 +47,8 @@ int partition(vecInt &lst, int l, int r) {
     while(true) {
         for(i=l;i<r && lst[i]<=v;++i);
         for(j=r;j>l && lst[j]>v;--j);
-        if(i<j) swap(lst,i,j); else break;
+        if(i<j) swap(lst[i],lst[j]); else break;
     }
-    swap(lst,l,j);
+    swap(lst[l],lst[j]);
     return j;
-}
-
-void swap(vecInt &lst, int i, int j) {
-    int k;
-    k = lst[i];
-    lst[i] = lst[j];
-    lst[j] = k;
 }
