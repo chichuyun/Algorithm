@@ -10,6 +10,7 @@
 | Insertion Sort |||[C++](./Codes/Sort/InsertionSort/main.cpp)||
 | Bubble Sort |||[C++](./Codes/Sort/BubbleSort/main.cpp)||
 | Selection Sort |||[C++](./Codes/Sort/SelectionSort/main.cpp)||
+| Shell Sort |||[C++](./Codes/Sort/ShellSort/main.cpp)||
 
 ## 编译器或解释器要求
 gcc5.8及以上  
