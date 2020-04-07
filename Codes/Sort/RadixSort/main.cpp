@@ -45,16 +45,11 @@ vecInt radixsort(vecInt &lst) {
         for(int &n : counts) n = 0;
         for(int n : lst) ++counts[n/ten%10];   // counting numbers
         for(int i=1;i<10;++i) counts[i] += counts[i-1];  // accumulation
-        cout<<"counts:  "<<endl;
-        for(int n : counts) cout<<n<<' ';
-        cout<<endl;
         for(int i=lst.size()-1;i>=0;--i) {
             int m = lst[i]/ten%10;
             res[counts[m]-1] = lst[i];
             --counts[m];
         }
-        for(int n : res) cout<<n<<' ';
-        cout<<endl;
         lst = res;
         ten *= 10;
     }
