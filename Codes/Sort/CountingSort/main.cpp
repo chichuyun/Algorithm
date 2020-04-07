@@ -34,12 +34,12 @@ int main() {
 vecInt countingsort(vecInt &lst) {
     int num = 0;
     for(int n : lst) num = max(num, n); // find the max number.
-    vector<int> counts(num+1,0);
+    vecInt counts(num+1,0);
     for(int n : lst) ++counts[n];   // counting numbers
-    for(int i=1;i<=num;++i) counts[i] = counts[i] + counts[i-1];  // accumulation
-    vector<int> res(lst.size(),0);
+    for(int i=1;i<=num;++i) counts[i] += counts[i-1];  // accumulation
+    vecInt res(lst.size(),0);
     for(int i=lst.size()-1;i>=0;--i) {
-        res[counts[lst[i]]] = lst[i];
+        res[counts[lst[i]]-1] = lst[i];
         --counts[lst[i]];
     }
     return res;
