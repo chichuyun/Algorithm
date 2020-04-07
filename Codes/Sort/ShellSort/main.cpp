@@ -32,13 +32,15 @@ int main() {
 }
 
 void shellsort(vecInt &lst) {
-     int step = lst.size()-1;
+     int len = lst.size(), step = len - 1;
      while(step) {
-        for(int i=0;i<lst.size();i+=step) {
-            int j = i - step, num = lst[i];
-            while(j>=0 && lst[j]>num) {
-                swap(lst[j],lst[j+step]);
-                j -= step;
+        for(int k=0;k<len-(len-1)/step*step;++k) {
+            for(int i=k;i<len;i+=step) {
+                int j = i - step, num = lst[i];
+                while(j>=0 && lst[j]>num) {
+                    swap(lst[j],lst[j+step]);
+                    j -= step;
+                }
             }
         }
         step = step >> 1;
