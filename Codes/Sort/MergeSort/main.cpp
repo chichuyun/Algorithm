@@ -51,7 +51,7 @@ vecInt merge(vecInt& left, vecInt& right) {
     int i=0, j=0, len1=left.size(), len2=right.size();
     while(i<len1 || j<len2) {
         if(i<len1 && j<len2) {
-            if(left[i]<right[j]) {
+            if(left[i]<=right[j]) {
                 res[i+j] = left[i];
                 ++i;
             } else {
