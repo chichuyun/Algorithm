@@ -6,6 +6,7 @@
 | Particle Swarm Optimization |[Python](./Codes/ParticleSwarmOptimization/main.py)||||
 | Neural Network              |[Python](./Codes/NeutralNetwork/main.py)|||[Julia](./Codes/NeutralNetwork/main.jl)|
 | Hungarian     |||[C++](./Codes/Hungarian/main.cpp)||
+| UnionFind     |||[C++](./Codes/UnionFind/main.cpp)
 | Counting Sort |||[C++](./Codes/Sort/CountingSort/main.cpp)||
 | Radix Sort |||[C++](./Codes/Sort/RadixSort/main.cpp)||
 | Insertion Sort |||[C++](./Codes/Sort/InsertionSort/main.cpp)||
