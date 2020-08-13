@@ -20,6 +20,14 @@
 | Heap Sort  |||[C++](./Codes/Sort/HeapSort/main.cpp)||
 | Topological Sort  |||[C++](./Codes/Sort/TopologicalSort/main.cpp)||
 
+## Graph Algorithm
+| Algorithm | Python | Fortran | C++ | Julia |
+| ----------|--------|---------|-----|-------|
+| Kruskal |||[C++](./Codes/Graph/Kruskal/main.cpp)||
+| Prim |||[C++](./Codes/Graph/Prim/main.cpp)||
+| Dijkstra |||[C++](./Codes/Graph/Dijkstra/main.cpp)|
+| Floyd |||[C++](./Codes/Graph/Floyd/main.cpp)|
+
 ## Clustering Algorithm
 | Algorithm | Python | Fortran | C++ | Julia |
 | ----------|--------|---------|-----|-------|
