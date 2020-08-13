@@ -1,6 +1,5 @@
 #include<iostream>
 #include<vector>
-#include<cmath>
 #include<random>
 #include<algorithm>
 #include<numeric>
@@ -24,7 +23,7 @@ private:
         for(unsigned i=0; i<M; ++i) {
             sum += (p[i] - q[i])*(p[i] - q[i]);
         }
-        return sqrt(sum);
+        return sum;
     }
 
     void _clear() {
