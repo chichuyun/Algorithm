@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<random>
+#include<unordered_set>
 #include<algorithm>
 #include<numeric>
 
@@ -12,7 +13,7 @@ typedef vector<vector<vector<double>>> Vec3;
 default_random_engine e;
 uniform_real_distribution<double> engine(-1.0, 1.0);
 
-class KMean {
+class KMedoids {
 private:
     unsigned int k, M, N;
     Vec2 nums, cens, cens2;
@@ -22,6 +23,14 @@ private:
         double sum = 0;
         for(unsigned i=0; i<M; ++i) {
             sum += (p[i] - q[i])*(p[i] - q[i]);
+        }
+        return sum;
+    }
+
+    double getDistances(vector<double>& p, int j) {
+        double sum = 0;
+        for(unsigned i=0; i<res[j].size(); ++i) {
+            sum += getDistance(p, res[j][i]);
         }
         return sum;
     }
@@ -48,28 +57,31 @@ private:
 
         cens2 = cens;
         for(unsigned i=0; i<k; ++i) {
-            for(unsigned h=0; h<M; ++h) cens[i][h] = 0;
             for(unsigned j=0; j<res[i].size(); ++j) {
-                for(unsigned h=0; h<M; ++h) {
-                    cens[i][h] += res[i][j][h];
+                minV = numeric_limits<double>::max();
+                dis = getDistances(res[i][j], i);
+                if(dis < minV) {
+                    minV = dis;
+                    cens[i] = res[i][j];
                 }
-            }
-            for(unsigned h=0; h<M; ++h) {
-                if(res.size()!=0) cens[i][h] /= static_cast<double>(res[i].size());
             }
         }
     }
 public:
-    KMean(const unsigned int k, Vec2& nums) : k(k), nums(nums) {
+    KMedoids(const unsigned int k, Vec2& nums) : k(k), nums(nums) {
         N = nums.size();
         M = nums[0].size();
         cens.resize(k, vector<double>(M));
         cens2.resize(k, vector<double>(M));
+        uniform_int_distribution<unsigned int> inte(0, N-1);
+        unordered_set<unsigned int> medoids;
         for(unsigned i=0; i<k; ++i) {
-            for(unsigned h=0; h<M; ++h) {
-                cens[i][h] = engine(e);
-                cens2[i][h] = cens[i][h] + 1.0;
-            }
+            int ran_int;
+            do {
+                ran_int = inte(e);
+            } while(medoids.count(ran_int));
+            cens[i] = nums[ran_int];
+            medoids.insert(i);
         }
     };
 
@@ -90,7 +102,7 @@ public:
 };
 
 int main() {
-    const unsigned int N = 1000;
+    const unsigned int N = 10000;
     const unsigned int M = 2;
     const unsigned int k = 5;
 
@@ -101,7 +113,7 @@ int main() {
         }
     }
 
-    KMean *s = new KMean(k, nums);
+    KMedoids *s = new KMedoids(k, nums);
     s->fit();
     Vec3 res = s->GetClasses();
     Vec2 cens = s->GetCenters();
