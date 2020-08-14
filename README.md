@@ -31,6 +31,7 @@
 ## Clustering Algorithm
 | Algorithm | Python | Fortran | C++ | Julia |
 | ----------|--------|---------|-----|-------|
+|K-NearestNeighbor|||[C++](./Codes/Clustering/KNearestNeighbor/main.cpp)||
 | K-Mean    |||[C++](./Codes/Clustering/KMean/main.cpp)||
 | K-Medoids |||[C++](./Codes/Clustering/KMedoids/main.cpp)||
 
