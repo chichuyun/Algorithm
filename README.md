@@ -38,6 +38,7 @@
 ## Data Structure
 | Algorithm | Python | Fortran | C++ | Julia |
 | ----------|--------|---------|-----|-------|
+| Trie |||[C++](./Codes/DataStructure/Trie/main.cpp)||
 | Least Recently Used |||[C++](./Codes/DataStructure/LeastRecentlyUsed/main.cpp)||
 | Least Frequently Used |||[C++](./Codes/DataStructure/LeastFrequentlyUsed/main.cpp)||
 
