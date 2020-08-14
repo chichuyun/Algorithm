@@ -31,6 +31,7 @@
 ## Clustering Algorithm
 | Algorithm | Python | Fortran | C++ | Julia |
 | ----------|--------|---------|-----|-------|
+|K-NearestNeighbor|||[C++](./Codes/Clustering/KNearestNeighbor/main.cpp)||
 | K-Mean    |||[C++](./Codes/Clustering/KMean/main.cpp)||
 | K-Medoids |||[C++](./Codes/Clustering/KMedoids/main.cpp)||
 
@@ -50,8 +51,8 @@
 ## 编译器或解释器要求
 > Gcc5.8及以上  
 > Python3  
-> Julia1.0
-> Flang 0.1.0
+> Julia1.0  
+> Flang0.1.0  
 
 ## 致谢
 感谢网友 **@尼古拉斯·魏** 对[Fortran](./Codes/GeneticAlgorithm/main.f95)版遗传算法的改进, 将其扩展可用于多变量函数的极值计算，并引入格雷码。
