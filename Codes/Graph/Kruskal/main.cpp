@@ -37,6 +37,8 @@ private:
             parents[root_i] = root_j;
             ranks[root_j] += ranks[root_i];
         }
+        
+        res.push_back(p);
     }
 
     int _find(int i) {
@@ -44,10 +46,6 @@ private:
             parents[i] = _find(parents[i]);
         }
         return parents[i];
-    }
-
-    bool _haveSameRoot(PairW& p) {
-        return _find(p.first[0]) == _find(p.first[1]);
     }
 public:
     Kruskal(const int N, VecPairW& lists) : N(N), lists(lists) {
@@ -60,10 +58,7 @@ public:
         _sort();
 
         for(int i=0; i<lists.size(); ++i) {
-            if(!_haveSameRoot(lists[i])) {
-                _union(lists[i]);
-                res.push_back(lists[i]);
-            }
+            _union(lists[i]);
         }
     }
 
