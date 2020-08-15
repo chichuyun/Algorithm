@@ -12,11 +12,11 @@ private:
     int M, N;
     int count;
 
-    bool match(int i) {
+    bool _match(int i) {
         for(int j=0; j<N; ++j) {
             if(adjs[i][j] && mems[j]) {
                 mems[j] = false;
-                if(vis[j] == -1 || match(vis[j])) {
+                if(vis[j] == -1 || _match(vis[j])) {
                     vis[j] = i;
                     mems[j] = false;
                     return true;
@@ -38,7 +38,7 @@ public:
     int solve() {
         for(int i=0; i<M; ++i) {
             for(int j=0; j<N; ++j) mems[j] = true;
-            if(match(i)) ++count;
+            if(_match(i)) ++count;
         }
         return count;
     }

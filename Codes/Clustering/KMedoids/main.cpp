@@ -19,7 +19,7 @@ private:
     Vec2 nums, cens, cens2;
     Vec3 res;
 
-    double getDistance(vector<double>& p, vector<double>& q) {
+    double _get_distance(vector<double>& p, vector<double>& q) {
         double sum = 0;
         for(unsigned i=0; i<M; ++i) {
             sum += (p[i] - q[i])*(p[i] - q[i]);
@@ -27,10 +27,10 @@ private:
         return sum;
     }
 
-    double getDistances(vector<double>& p, int j) {
+    double _get_distances(vector<double>& p, int j) {
         double sum = 0;
         for(unsigned i=0; i<res[j].size(); ++i) {
-            sum += getDistance(p, res[j][i]);
+            sum += _get_distance(p, res[j][i]);
         }
         return sum;
     }
@@ -46,7 +46,7 @@ private:
         for(unsigned i=0; i<N; ++i) {
             minV = numeric_limits<double>::max();
             for(unsigned j=0; j<k; ++j) {
-                dis = getDistance(cens[j], nums[i]);
+                dis = _get_distance(cens[j], nums[i]);
                 if(dis < minV) {
                     minV = dis;
                     itype = j;
@@ -59,7 +59,7 @@ private:
         for(unsigned i=0; i<k; ++i) {
             for(unsigned j=0; j<res[i].size(); ++j) {
                 minV = numeric_limits<double>::max();
-                dis = getDistances(res[i][j], i);
+                dis = _get_distances(res[i][j], i);
                 if(dis < minV) {
                     minV = dis;
                     cens[i] = res[i][j];
@@ -92,11 +92,11 @@ public:
         }
     }
 
-    Vec3 GetClasses() {
+    Vec3 getClasses() {
         return res;
     }
 
-    Vec2 GetCenters() {
+    Vec2 getCenters() {
         return cens;
     }
 };
@@ -115,8 +115,8 @@ int main() {
 
     KMedoids *s = new KMedoids(k, nums);
     s->fit();
-    Vec3 res = s->GetClasses();
-    Vec2 cens = s->GetCenters();
+    Vec3 res = s->getClasses();
+    Vec2 cens = s->getCenters();
 
     for(unsigned i=0; i<k; ++i) {
         cout << "Class " << i+1 << ": ";

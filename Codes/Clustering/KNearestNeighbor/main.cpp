@@ -19,7 +19,7 @@ private:
     Vec3 knns, res;
     Vec2 nums;
 
-    double getDistance(vector<double>& p, vector<double>& q) {
+    double _get_distance(vector<double>& p, vector<double>& q) {
         double sum = 0;
         for(unsigned i=0; i<M; ++i) {
             sum += (p[i] - q[i])*(p[i] - q[i]);
@@ -27,14 +27,14 @@ private:
         return sum;
     }
 
-    double getDistances(vector<double>& p, int j) {
+    double _get_distances(vector<double>& p, int j) {
         double sum = 0;
 
         for(unsigned i=0; i<res[j].size(); ++i) {
-            sum += getDistance(p, res[j][i]);
+            sum += _get_distance(p, res[j][i]);
         }
         for(unsigned i=0; i<knns[j].size(); ++i) {
-            sum += getDistance(p, knns[j][i]);
+            sum += _get_distance(p, knns[j][i]);
         }
         return sum;
     }
@@ -45,7 +45,7 @@ private:
         for(unsigned i=0; i<N; ++i) {
             minV = numeric_limits<double>::max();
             for(unsigned j=0; j<k; ++j) {
-                dis = getDistances(nums[i], j);
+                dis = _get_distances(nums[i], j);
                 if(dis < minV) {
                     itype = j;
                     minV = dis;
@@ -65,7 +65,7 @@ public:
         _clustering();
     }
 
-    Vec3 GetClasses() {
+    Vec3 getClasses() {
         return res;
     }
 };
@@ -94,7 +94,7 @@ int main() {
 
     KNearestNeighbor *s = new KNearestNeighbor(k, knns, nums);
     s->fit();
-    Vec3 res = s->GetClasses();
+    Vec3 res = s->getClasses();
 
     for(unsigned i=0; i<k; ++i) {
         cout << "Class " << i+1 << ": ";
