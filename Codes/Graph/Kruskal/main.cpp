@@ -18,12 +18,12 @@ private:
     VecPairW lists;
     VecPairW res;
 
-    static bool func(PairW& p, PairW& q) {
+    static bool _func(PairW& p, PairW& q) {
         return p.second < q.second;
     }
 
     void _sort() {
-        sort(lists.begin(), lists.end(), func);
+        sort(lists.begin(), lists.end(), _func);
     }
 
     void _union(PairW& p) {
@@ -65,6 +65,14 @@ public:
     VecPairW getLists() {
         return res;
     }
+    
+    double getMinCost() {
+        if(res.empty()) solve();
+
+        double cost = 0;
+        for(auto& p : res) cost += p.second;
+        return cost;
+    }
 };
 
 int main() {
@@ -91,6 +99,8 @@ int main() {
 
     s->solve();
     VecPairW res = s->getLists();
+    double minCost = s->getMinCost();
+    cout << "Min Cost: " << minCost << endl;
     for(int i=0; i<res.size(); ++i) {
         cout << res[i].first[0] << " " << res[i].first[1] << endl;
     }
