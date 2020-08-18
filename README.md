@@ -27,16 +27,17 @@
 | Prim |||[C++](./Codes/Graph/Prim/main.cpp)||
 | Dijkstra |||[C++](./Codes/Graph/Dijkstra/main.cpp)|
 | Floyd |||[C++](./Codes/Graph/Floyd/main.cpp)|
+| GrahamScan |||[C++](./Codes/Graph/GrahamScan/main.cpp)|
 
 ## String
 | Algorithm | Python | Fortran | C++ | Julia |
 | ----------|--------|---------|-----|-------|
-|KnuthMorrisPratt|||[C++](./Codes/String/KnuthMorrisPratt/main.cpp)||
+| KnuthMorrisPratt |||[C++](./Codes/String/KnuthMorrisPratt/main.cpp)||
 
 ## Clustering Algorithm
 | Algorithm | Python | Fortran | C++ | Julia |
 | ----------|--------|---------|-----|-------|
-|K-NearestNeighbor|||[C++](./Codes/Clustering/KNearestNeighbor/main.cpp)||
+| K-NearestNeighbor |||[C++](./Codes/Clustering/KNearestNeighbor/main.cpp)||
 | K-Mean    |||[C++](./Codes/Clustering/KMean/main.cpp)||
 | K-Medoids |||[C++](./Codes/Clustering/KMedoids/main.cpp)||
 
