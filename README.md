@@ -28,6 +28,11 @@
 | Dijkstra |||[C++](./Codes/Graph/Dijkstra/main.cpp)|
 | Floyd |||[C++](./Codes/Graph/Floyd/main.cpp)|
 
+## String
+| Algorithm | Python | Fortran | C++ | Julia |
+| ----------|--------|---------|-----|-------|
+|KnuthMorrisPratt|||[C++](./Codes/String/KnuthMorrisPratt/main.cpp)||
+
 ## Clustering Algorithm
 | Algorithm | Python | Fortran | C++ | Julia |
 | ----------|--------|---------|-----|-------|
