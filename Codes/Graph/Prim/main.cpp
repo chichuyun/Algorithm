@@ -23,7 +23,7 @@ private:
         }
     };
 
-    void _adjacency_matrix() {
+    void _adjacency_list() {
         adjs.resize(N);
         for(auto& l : lists) {
             Vec1 p = l.first;
@@ -35,7 +35,7 @@ public:
     Prim(const int N, VecPairW& lists) : N(N), lists(lists) {}
 
     void solve() {
-        _adjacency_matrix();
+        _adjacency_list();
 
         vector<int> points(N, 0);  // Hash Table
         points[0] = 1;
