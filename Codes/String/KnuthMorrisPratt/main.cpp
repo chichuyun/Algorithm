@@ -39,20 +39,15 @@ public:
         _generate_next();
 
         int i = 0, j = 0;
-        while(i < str.size()) {
-            if(str[i]==pat[j]) {
+        while(i < str.size() && j < N) {
+            if(j == -1 || str[i]==pat[j]) {
                 ++i;
                 ++j;
             } else {
                 j = nexts[j];
-                if(j < 0) {
-                    ++i;
-                    j = 0;
-                }
             }
-            if(j == N) return i - N;
         }
-
+        if(j == N) return i - N;
         return -1;
     }
 };
