@@ -40,7 +40,7 @@ public:
 
         int i = 0, j = 0;
         while(i < str.size() && j < N) {
-            if(j == -1 || str[i]==pat[j]) {
+            if(j == -1 || str[i] == pat[j]) {
                 ++i;
                 ++j;
             } else {
