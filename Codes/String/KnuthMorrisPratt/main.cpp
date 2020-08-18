@@ -9,9 +9,9 @@ typedef vector<int> Vec1;
 
 class KMP {
 private:
-    int N;
     string str;
     string pat;
+    int N;
     Vec1 nexts;
 
     void _generate_next() {
@@ -19,23 +19,17 @@ private:
         nexts.clear();
         nexts.resize(N);
 
-        nexts[0] = 0;
-        int pre = 0;
-        for(int i=1; i<N; ++i) {
-            if(pat[i]==pat[pre]) {
-                ++pre;
-                nexts[i] = nexts[i-1] + 1;
-            } else if(pat[i]==pat[0]) {
-                pre = 1;
-                nexts[i] = 1;
-            } else {
-                pre = 0;
-                nexts[i] = 0;
-            }
-        }
-
-        for(int i=N-1; i>0; --i) nexts[i] = nexts[i-1];
         nexts[0] = -1;
+        int k = -1, i = 0;
+        while(i < N) {
+            if(k == -1 || pat[i] == pat[k]) {
+                ++k;
+                ++i;
+                nexts[i] = k;
+		    } else {
+                k = nexts[k];
+		    }
+        }
     }
 public:
     KMP(string str) : str(str) {}
@@ -68,7 +62,7 @@ int main() {
 
     KMP *k = new KMP(str);
     cout << "String:  " << str << endl;
-    string str1 = "abcababcxabab";
+    string str1 = "abcababcabca";
     cout << "str1: " << str1 << " " << k->match(str1) << endl;
     string str2 = "abcx";
     cout << "str2: " << str2 << " " << k->match(str2) << endl;
