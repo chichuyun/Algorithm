@@ -26,9 +26,9 @@ private:
                 ++k;
                 ++i;
                 nexts[i] = k;
-		    } else {
+            } else {
                 k = nexts[k];
-		    }
+            }
         }
     }
 public:
