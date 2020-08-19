@@ -53,7 +53,8 @@
 | ----------|--------|---------|-----|-------|
 | Neural Network |[Python](./Codes/Others/NeutralNetwork/main.py)|||[Julia](./Codes/Others/NeutralNetwork/main.jl)|
 | Hungarian      |||[C++](./Codes/Others/Hungarian/main.cpp)||
-| Union Find      |||[C++](./Codes/Others/UnionFind/main.cpp)||
+| Union Find     |||[C++](./Codes/Others/UnionFind/main.cpp)||
+| GrahamScan     |||[C++](./Codes/Others/GrahamScan/main.cpp)||
 
 ## 编译器或解释器要求
 > Gcc5.8及以上  
