@@ -27,7 +27,6 @@
 | Prim |||[C++](./Codes/Graph/Prim/main.cpp)||
 | Dijkstra |||[C++](./Codes/Graph/Dijkstra/main.cpp)|
 | Floyd |||[C++](./Codes/Graph/Floyd/main.cpp)|
-| GrahamScan |||[C++](./Codes/Graph/GrahamScan/main.cpp)|
 
 ## String
 | Algorithm | Python | Fortran | C++ | Julia |
