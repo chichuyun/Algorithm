@@ -26,8 +26,7 @@ private:
         return false;
     }
 public:
-    Hungarian(vector<vector<bool>> adjs) {
-        this->adjs = adjs;
+    Hungarian(vector<vector<bool>> adjs) : adjs(adjs) {
         M = adjs.size();
         N = adjs[0].size();
         count = 0;
