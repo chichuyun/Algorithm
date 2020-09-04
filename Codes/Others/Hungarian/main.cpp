@@ -18,7 +18,6 @@ private:
                 mems[j] = false;
                 if(vis[j] == -1 || _match(vis[j])) {
                     vis[j] = i;
-                    mems[j] = false;
                     return true;
                 }
             }
