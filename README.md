@@ -18,6 +18,8 @@
 | Quick Sort |||[C++](./Codes/Sort/QuickSort/main.cpp)||
 | Merge Sort |||[C++](./Codes/Sort/MergeSort/main.cpp)||
 | Heap Sort  |||[C++](./Codes/Sort/HeapSort/main.cpp)||
+| Tntro Sort |||||
+| Tim Sort |||||
 | Topological Sort  |||[C++](./Codes/Sort/TopologicalSort/main.cpp)||
 
 ## Graph Algorithm
