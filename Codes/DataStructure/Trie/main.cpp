@@ -22,10 +22,10 @@ public:
         TrieNode *p = head;
 
         for(char& c : s) {
-            if(!p->alpha.count(c-'a')) {
-                p->alpha[c-'a'] = new TrieNode();
+            if(!p->alpha.count(c)) {
+                p->alpha[c] = new TrieNode();
             }
-            p = p->alpha[c-'a'];
+            p = p->alpha[c];
         }
         p->isOk = true;
     }
@@ -34,10 +34,10 @@ public:
         TrieNode *p = head;
 
         for(char& c : s) {
-            if(!p->alpha.count(c-'a')) {
+            if(!p->alpha.count(c)) {
                 return false;
             }
-            p = p->alpha[c-'a'];
+            p = p->alpha[c];
         }
         return p->isOk;
     }
@@ -46,10 +46,10 @@ public:
         TrieNode *p = head;
 
         for(char& c : s) {
-            if(!p->alpha.count(c-'a')) {
+            if(!p->alpha.count(c)) {
                 return false;
             }
-            p = p->alpha[c-'a'];
+            p = p->alpha[c];
         }
         return true;
     }
