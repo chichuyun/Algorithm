@@ -47,7 +47,7 @@
 | Algorithm | Python | Fortran | C++ | Julia |
 | ----------|--------|---------|-----|-------|
 | Trie |||[C++](./Codes/DataStructure/Trie/main.cpp)||
-| Binary Index Tree |||||
+| Binary Index Tree |||[C++](./Codes/DataStructure/BinaryIndexTree/main.cpp)||
 | Segment Tree |||[C++](./Codes/DataStructure/SegmentTree/main.cpp)||
 | Least Recently Used |||[C++](./Codes/DataStructure/LeastRecentlyUsed/main.cpp)||
 | Least Frequently Used |||||
