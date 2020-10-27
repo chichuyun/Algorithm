@@ -60,6 +60,7 @@
 | Union Find     |||[C++](./Codes/Others/UnionFind/main.cpp)||
 | GrahamScan     |||[C++](./Codes/Others/GrahamScan/main.cpp)||
 | Montgomery |||[C++](./Codes/Others/Montgomery/main.cpp)||
+| Shunting Yard |||||
 
 ## 编译器或解释器要求
 > Gcc5.8及以上  
