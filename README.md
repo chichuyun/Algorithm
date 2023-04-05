@@ -3,7 +3,7 @@
 ## Evolutionary Algorithm
 | Algorithm | Python | Fortran | C++ | Julia |
 | ----------|--------|---------|-----|-------|
-| Genetic Algorithm           ||[Fortran](./Codes/Evolutionary/GeneticAlgorithm/main.f95), [Fortran-v2](./Codes/Evolutionary/GeneticAlgorithm/version2.f90)|||
+| Genetic Algorithm           |[Python](./Codes/Evolutionary/GeneticAlgorithm/TSP.py)|[Fortran](./Codes/Evolutionary/GeneticAlgorithm/main.f95), [Fortran-v2](./Codes/Evolutionary/GeneticAlgorithm/version2.f90)|||
 | Particle Swarm Optimization |[Python](./Codes/Evolutionary/ParticleSwarmOptimization/main.py)||||
 
 ## Sort Algorithm
